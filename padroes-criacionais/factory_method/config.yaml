@@ -1,0 +1,7 @@
+database:
+  type: "mysql"
+  database: "teste"
+  host: "localhost"
+  port: 3306
+  username: "mdcg"
+  password: ""
