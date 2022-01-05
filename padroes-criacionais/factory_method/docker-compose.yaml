@@ -1,0 +1,26 @@
+version: '2.2'
+
+services:
+  postgresql_db:
+    image: postgres:9-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=teste
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=mdcg
+      - POSTGRES_PASSWORD=
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+  
+  mysql_db:
+    image: mysql:8.0.27
+    restart: always
+    environment:
+      - MYSQL_DATABASE=teste
+      - MYSQL_USER=mdcg
+      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=
+    ports:
+      - "3306:3306"
